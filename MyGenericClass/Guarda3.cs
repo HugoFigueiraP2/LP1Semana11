@@ -14,6 +14,45 @@ namespace MyGenericClass
             _t3 = default(T);
         }
 
+        public T GetItem(int i)
+        {
+            if (i == 0) return _t1;
+            else if (i == 1) return _t2;
+            else if (i == 2) return _t3;
+            else throw new IndexOutOfRangeException();
+
+            
+        }
+
+        public void SetItem(int i, T item)
+        {
+            if (i < 0 || i > 2) 
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            switch (i)
+            {
+                case 0:
+                    _t1 = item;
+                    break;
+                case 1:
+                    _t2 = item;
+                    break;
+                case 2:
+                    _t3 = item; 
+                    break;
+            }
+
+
+            
+
+
+                                
+
+
+        }
+
     }
 
 
