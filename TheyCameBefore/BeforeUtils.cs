@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Collections;
 
 namespace TheyCameBefore
 {
     public static class BeforeUtils
     {
-        public static object GetTheOnesBefore<T>(IEnumerable<object> items, T value) where T : IComparable
+        public static IEnumerable GetTheOnesBefore<T>(IEnumerable<T> items, double number) where T : IComparable
         {
-            int count = 0;
 
-            foreach (var item in items)
+            foreach (object item in items)
             {
                 if (item is T itemT && itemT.CompareTo(value) < 0)
                 {
