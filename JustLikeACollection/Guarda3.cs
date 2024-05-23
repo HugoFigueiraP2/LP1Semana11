@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MyEnumerable
+namespace JustLikeACollection
 {
     public class Guarda3<T> : IEnumerable<T>
     {
@@ -51,6 +51,13 @@ namespace MyEnumerable
                     break;
             }
 
+        }
+
+        public void Add(T item)
+        {
+            if (Equals(_t1, default(T))) _t1 = item;
+            else if (Equals(_t2, default(T))) _t2 = item;
+            else if (Equals(_t3, default(T))) _t3 = item;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
