@@ -7,18 +7,18 @@ namespace TheyCameBefore
 {
     public static class BeforeUtils
     {
-        public static IEnumerable GetTheOnesBefore<T>(IEnumerable<T> items, double number) where T : IComparable
+        public static IEnumerable GetTheOnesBefore<T>(IEnumerable<T> items, T number) where T : IComparable<T>
         {
 
-            foreach (object item in items)
+            foreach (T item in items)
             {
-                if (item is T itemT && itemT.CompareTo(value) < 0)
+                if (item.CompareTo(number) < 0)
                 {
-                    count++;
+                    yield return item;
                 }
             }
 
-            return count;
+            
         }
     }
 }
