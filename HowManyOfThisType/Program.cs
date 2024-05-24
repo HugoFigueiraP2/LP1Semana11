@@ -39,7 +39,12 @@ namespace HowManyOfThisType
             // string: 1
             // byte  : 0
 
-            Console.WriteLine("Merci d’utiliser ce programme");
+<<<<<<< HEAD
+            Console.WriteLine("Thank you for using this program!");
+=======
+            Console.WriteLine("Obrigado por ter usado este programa!");
+            
+>>>>>>> 224ca0a (Adding console.writeline)
         }
     }
 }
